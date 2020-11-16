@@ -1,0 +1,1 @@
+// Check wether the string is pallindrome or not.

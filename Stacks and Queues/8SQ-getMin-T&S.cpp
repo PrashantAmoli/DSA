@@ -1,0 +1,1 @@
+//Design a stack that support getMin in O(1) time and O(1) extra space.
