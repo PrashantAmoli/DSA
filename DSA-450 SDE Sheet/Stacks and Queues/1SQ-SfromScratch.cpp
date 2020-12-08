@@ -32,8 +32,11 @@ stack *push(stack *head, int data)
     return head;
 }
 
-void pop(stack *head)
+void pop(stack **head) //Double Pointer argument &head
 {
+    stack *temp = *head;
+    (*head) = (*head)->next;
+    delete (temp);
 }
 
 void display(stack *head)
@@ -46,7 +49,7 @@ void display(stack *head)
     stack *temp = head;
     while (temp != NULL)
     {
-        cout << temp->data << " - ";
+        cout << temp->data << "<-> ";
         temp = temp->next;
     }
 }
@@ -55,7 +58,7 @@ int main()
 {
     stack *head = NULL;
     int i, data;
-    cout << "1\tCreate\n2\tPush\n3\tPop\n4\tDisplay\n5\tEnd" << endl;
+    cout << "1\tPush\n2\tPop\n3\tDisplay\n4\tEnd" << endl;
     do
     {
         cout << "Enter your choice:";
@@ -63,29 +66,25 @@ int main()
         switch (i)
         {
         case 1:
-            cout << "Create:\n\tInput:";
-            cin >> data;
-            head = create(data);
-            break;
-        case 2:
             cout << "Push:\n\tInput:";
             cin >> data;
             head = push(head, data);
             break;
-        case 3:
+        case 2:
             cout << "Pop:" << endl;
-            pop(head);
+            pop(&head);
             break;
-        case 4:
+        case 3:
             cout << "Display:\n";
             display(head);
             break;
-        case 5:
+        case 4:
             cout << "Exit:";
             return 0;
             break;
         default:
-            cout << "Invalid Input!" << endl;
+            cout << "Invalid Input!\n"
+                 << endl;
         }
     } while (1);
 
