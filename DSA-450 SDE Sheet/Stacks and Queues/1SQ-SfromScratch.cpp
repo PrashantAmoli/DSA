@@ -24,9 +24,10 @@ stack *push(stack *head, int data)
     }
     else
     {
-        head->next = create(data);
-        head->next->next = head;
-        head = head->next;
+        stack *s1 = new stack;
+        s1->data = data;
+        s1->next = head;
+        head = s1;
     }
     return head;
 }
