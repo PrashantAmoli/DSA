@@ -2,5 +2,5 @@
 *.exe
 *.bin
 .cph
-.vscode
+.vscode/
 settings.json

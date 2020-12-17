@@ -1,6 +1,25 @@
 {
     "files.associations": {
         "ostream": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "atomic": "cpp",
+        "*.tcc": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "memory_resource": "cpp",
+        "string_view": "cpp",
+        "random": "cpp",
+        "fstream": "cpp",
+        "memory": "cpp",
+        "sstream": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp",
+        "bit": "cpp",
+        "algorithm": "cpp",
+        "initializer_list": "cpp",
+        "stdexcept": "cpp",
+        "tuple": "cpp"
     }
 }
